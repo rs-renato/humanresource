@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/rs-renato/humanresource/tree/master.svg?style=svg)](https://circleci.com/gh/rs-renato/humanresource/tree/master)
+[![Build Status](https://app.travis-ci.com/rs-renato/humanresource.svg?branch=master)](https://app.travis-ci.com/rs-renato/humanresource)
 
 # Human Resource Microservices
 
