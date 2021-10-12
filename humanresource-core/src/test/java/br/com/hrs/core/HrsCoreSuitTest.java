@@ -6,10 +6,8 @@ import org.junit.platform.suite.api.SuiteDisplayName;
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
-@SelectPackages({
-        "br.com.hrs.core.usecase"
-})
+@SelectPackages("br.com.hrs.core")
 @SuiteDisplayName("HRS Core Suite Test")
-public class HrsCoreTestSuit {
+public class HrsCoreSuitTest {
 
 }

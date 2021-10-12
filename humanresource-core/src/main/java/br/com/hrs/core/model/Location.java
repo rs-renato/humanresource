@@ -1,18 +1,20 @@
 package br.com.hrs.core.model;
 
+import br.com.hrs.core.common.key.BaseKey;
+
 import java.util.Objects;
 
-public class Location implements EntityKey<Integer>{
+public class Location implements BaseKey<Integer> {
 
-	private Integer id;
-	private String address;
-	private String postalCode;
-	private String city;
-	private String state;
-	private Country country;
+    private Integer id;
+    private String address;
+    private String postalCode;
+    private String city;
+    private String state;
+    private Country country;
 
-	public Location(){
-	}
+    public Location() {
+    }
 
 	public Location(String address, String postalCode, String city, String state, Country country) {
 		this(null, address, postalCode, city, state, country);

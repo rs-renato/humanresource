@@ -1,4 +1,4 @@
-package br.com.hrs.core.config.annotation;
+package br.com.hrs.core.common.config.annotation;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;

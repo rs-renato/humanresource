@@ -1,7 +1,7 @@
 package br.com.hrs.core;
 
 
-import br.com.hrs.core.config.annotation.EnableHrsCore;
+import br.com.hrs.core.common.config.annotation.EnableHrsCore;
 import org.springframework.context.annotation.Configuration;
 
 

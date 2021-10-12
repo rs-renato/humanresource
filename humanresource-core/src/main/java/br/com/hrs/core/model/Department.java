@@ -1,18 +1,20 @@
 package br.com.hrs.core.model;
 
+import br.com.hrs.core.common.key.BaseKey;
+
 import java.util.Objects;
 
-public class Department implements EntityKey<Integer>{
+public class Department implements BaseKey<Integer> {
 
-	private Integer id;
-	private String name;
-	private Employee manager;
-	private Location location;
+    private Integer id;
+    private String name;
+    private Employee manager;
+    private Location location;
 
-	public Department() {
-	}
+    public Department() {
+    }
 
-	public Department(String name, Employee manager, Location location) {
+    public Department(String name, Employee manager, Location location) {
 		this(null, name, manager, location);
 	}
 

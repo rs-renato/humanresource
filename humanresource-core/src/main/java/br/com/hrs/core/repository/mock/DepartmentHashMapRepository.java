@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Named
-public class DepartmentMockRepository extends MockRepository<Department, Integer> implements DepartmentRepository {
+public class DepartmentHashMapRepository extends HashMapRepository<Department, Integer> implements DepartmentRepository {
 
     @Override
     public List<Department> buildCollection() {

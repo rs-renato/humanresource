@@ -1,8 +1,8 @@
 package br.com.hrs.core.validator.department;
 
+import br.com.hrs.core.common.error.Error;
+import br.com.hrs.core.common.error.FIELD;
 import br.com.hrs.core.exception.HrsBusinessException;
-import br.com.hrs.core.exception.error.Error;
-import br.com.hrs.core.exception.error.FIELD;
 import br.com.hrs.core.model.Department;
 import br.com.hrs.core.repository.DepartmentRepository;
 import br.com.hrs.core.validator.SaveValidator;

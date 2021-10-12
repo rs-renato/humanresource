@@ -1,7 +1,7 @@
 package br.com.hrs.core.repository.mock;
 
-import br.com.hrs.core.exception.error.Error;
-import br.com.hrs.core.exception.error.FIELD;
+import br.com.hrs.core.common.error.Error;
+import br.com.hrs.core.common.error.FIELD;
 import br.com.hrs.core.model.Country;
 import br.com.hrs.core.model.Region;
 import br.com.hrs.core.repository.CountryRepository;
@@ -15,12 +15,12 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Named
-public class CountryMockRepository extends MockRepository<Country, String> implements CountryRepository {
+public class CountryHashMapRepository extends HashMapRepository<Country, String> implements CountryRepository {
 
     private RegionRepository regionRepository;
 
     @Inject
-    public CountryMockRepository(RegionRepository regionRepository) {
+    public CountryHashMapRepository(RegionRepository regionRepository) {
         this.regionRepository = regionRepository;
     }
 

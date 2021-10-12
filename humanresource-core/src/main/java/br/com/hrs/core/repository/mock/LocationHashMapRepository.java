@@ -9,17 +9,17 @@ import java.util.Arrays;
 import java.util.List;
 
 @Named
-public class LocationMockRepository extends MockRepository<Location, Integer> implements LocationRepository {
+public class LocationHashMapRepository extends HashMapRepository<Location, Integer> implements LocationRepository {
 
     @Override
     public List<Location> buildCollection() {
 
         Location location01 = new Location.Builder()
-                                .id(1400)
-                                .address("2014 Jabberwocky Rd")
-                                .postalCode("26192")
-                                .city("Southlake")
-                                .state("Texas")
+                .id(1400)
+                .address("2014 Jabberwocky Rd")
+                .postalCode("26192")
+                .city("Southlake")
+                .state("Texas")
                                 .country(new Country.Builder().id("US").build())
                             .build();
 

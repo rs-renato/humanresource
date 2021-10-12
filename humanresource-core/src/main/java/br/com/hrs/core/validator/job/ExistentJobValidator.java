@@ -1,8 +1,8 @@
 package br.com.hrs.core.validator.job;
 
+import br.com.hrs.core.common.error.Error;
+import br.com.hrs.core.common.error.FIELD;
 import br.com.hrs.core.exception.HrsNotFoundException;
-import br.com.hrs.core.exception.error.Error;
-import br.com.hrs.core.exception.error.FIELD;
 import br.com.hrs.core.model.Job;
 import br.com.hrs.core.repository.JobRepository;
 import br.com.hrs.core.validator.DeleteValidator;

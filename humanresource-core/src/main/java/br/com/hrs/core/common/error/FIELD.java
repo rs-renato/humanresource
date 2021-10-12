@@ -1,4 +1,4 @@
-package br.com.hrs.core.exception.error;
+package br.com.hrs.core.common.error;
 
 import br.com.hrs.core.exception.HrsBusinessException;
 import br.com.hrs.core.exception.HrsMandatoryException;

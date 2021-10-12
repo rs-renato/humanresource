@@ -1,8 +1,8 @@
 package br.com.hrs.core.validator.employee;
 
+import br.com.hrs.core.common.error.Error;
+import br.com.hrs.core.common.error.FIELD;
 import br.com.hrs.core.exception.HrsBusinessException;
-import br.com.hrs.core.exception.error.Error;
-import br.com.hrs.core.exception.error.FIELD;
 import br.com.hrs.core.model.Employee;
 import br.com.hrs.core.model.Job;
 import br.com.hrs.core.repository.JobRepository;

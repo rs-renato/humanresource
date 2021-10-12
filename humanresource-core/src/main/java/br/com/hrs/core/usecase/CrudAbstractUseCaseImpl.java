@@ -1,6 +1,6 @@
 package br.com.hrs.core.usecase;
 
-import br.com.hrs.core.model.EntityKey;
+import br.com.hrs.core.common.key.BaseKey;
 import br.com.hrs.core.repository.Repository;
 import br.com.hrs.core.repository.pagination.Pagination;
 import br.com.hrs.core.validator.DeleteValidator;
@@ -13,11 +13,12 @@ import org.apache.logging.log4j.Logger;
 import java.util.List;
 import java.util.Optional;
 
-public abstract class CrudAbstractUseCaseImpl<E extends EntityKey<ID>, ID> implements CrudUseCase<E, ID>{
+public abstract class CrudAbstractUseCaseImpl<E extends BaseKey<ID>, ID> implements CrudUseCase<E, ID> {
 
     protected static final Logger logger = LogManager.getLogger(CrudAbstractUseCaseImpl.class);
 
     protected abstract List<Validator<E>> getValidators();
+
     protected abstract Repository<E, ID> getRepository();
 
     @Override

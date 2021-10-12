@@ -1,18 +1,20 @@
 package br.com.hrs.core.model;
 
+import br.com.hrs.core.common.key.BaseKey;
+
 import java.util.Objects;
 
-public class Job implements EntityKey<String>{
+public class Job implements BaseKey<String> {
 
-	private String id;
-	private String title;
-	private Float minSalary;
-	private Float maxSalary;
+    private String id;
+    private String title;
+    private Float minSalary;
+    private Float maxSalary;
 
-	public Job(){
-	}
+    public Job() {
+    }
 
-	public Job(String title, Float minSalary, Float maxSalary) {
+    public Job(String title, Float minSalary, Float maxSalary) {
 		this(null, title, minSalary, maxSalary);
 	}
 

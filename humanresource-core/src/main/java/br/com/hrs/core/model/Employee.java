@@ -1,19 +1,21 @@
 package br.com.hrs.core.model;
 
+import br.com.hrs.core.common.key.BaseKey;
+
 import java.util.Date;
 import java.util.Objects;
 
-public class Employee implements EntityKey<Integer>{
+public class Employee implements BaseKey<Integer> {
 
-	private Integer id;
-	private String firstName;
-	private String lastName;
-	private String email;
-	private String phone;
-	private Date hireDate;
-	private Float salary;
-	private Float commissionPercent;
-	private Employee manager;
+    private Integer id;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phone;
+    private Date hireDate;
+    private Float salary;
+    private Float commissionPercent;
+    private Employee manager;
 	private Job job;
 	private Department department;
 

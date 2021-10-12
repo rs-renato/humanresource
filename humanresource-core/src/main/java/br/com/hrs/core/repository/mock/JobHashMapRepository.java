@@ -8,17 +8,17 @@ import java.util.Arrays;
 import java.util.List;
 
 @Named
-public class JobMockRepository extends MockRepository<Job, String> implements JobRepository {
+public class JobHashMapRepository extends HashMapRepository<Job, String> implements JobRepository {
 
     @Override
     public List<Job> buildCollection() {
 
         Job job01 = new Job.Builder()
-                        .id("AD_PRES")
-                        .title("President")
-                        .minSalary(20080f)
-                        .maxSalay(40000f)
-                     .build();
+                .id("AD_PRES")
+                .title("President")
+                .minSalary(20080f)
+                .maxSalay(40000f)
+                .build();
 
         Job job02 = new Job.Builder()
                 .id("AD_VP")

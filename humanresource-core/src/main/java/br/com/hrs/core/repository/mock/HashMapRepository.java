@@ -1,9 +1,10 @@
 package br.com.hrs.core.repository.mock;
 
-import br.com.hrs.core.exception.error.Error;
-import br.com.hrs.core.exception.error.FIELD;
-import br.com.hrs.core.model.EntityKey;
+import br.com.hrs.core.common.error.Error;
+import br.com.hrs.core.common.error.FIELD;
+import br.com.hrs.core.common.key.BaseKey;
 import br.com.hrs.core.repository.Repository;
+import br.com.hrs.core.repository.pagination.PageableArrayList;
 import br.com.hrs.core.repository.pagination.Pagination;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,15 +12,15 @@ import org.apache.logging.log4j.Logger;
 import java.lang.reflect.ParameterizedType;
 import java.util.*;
 
-public abstract class MockRepository <E extends EntityKey<ID>, ID> implements Repository<E, ID>{
+public abstract class HashMapRepository<E extends BaseKey<ID>, ID> implements Repository<E, ID> {
 
-    protected static Logger logger = LogManager.getLogger(MockRepository.class);
+    protected static Logger logger = LogManager.getLogger(HashMapRepository.class);
 
     protected final Map<ID, E> database = new HashMap<>();
     protected final String REPOSITORY_NAME = this.getClass().getSimpleName();
-    protected final String ENTITY_NAME  = getGenericName();
+    protected final String ENTITY_NAME = getGenericName();
 
-    public MockRepository() {
+    public HashMapRepository() {
 
         loadMockDatabase(buildCollection());
     }

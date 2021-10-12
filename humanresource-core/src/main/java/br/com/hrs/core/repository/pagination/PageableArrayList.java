@@ -1,18 +1,24 @@
-package br.com.hrs.core.repository.mock;
+package br.com.hrs.core.repository.pagination;
 
 import java.util.List;
 
-class PageableArrayList<T> {
+public class PageableArrayList<T> {
 
-    /** the default page size */
+    /**
+     * the default page size
+     */
     public static final int DEFAULT_PAGE_SIZE = 10;
 
     private static final int PAGE_WINDOW = 10;
 
-    /** the list over which this class is paging */
+    /**
+     * the list over which this class is paging
+     */
     private List<T> list;
 
-    /** the page size */
+    /**
+     * the page size
+     */
     private int pageSize = DEFAULT_PAGE_SIZE;
 
     /** the current page */

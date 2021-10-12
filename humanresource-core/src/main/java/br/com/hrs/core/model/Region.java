@@ -1,19 +1,21 @@
 package br.com.hrs.core.model;
 
+import br.com.hrs.core.common.key.BaseKey;
+
 import java.util.List;
 import java.util.Objects;
 
-public class Region implements EntityKey<Integer>{
+public class Region implements BaseKey<Integer> {
 
-	private Integer id;
-	private String name;
-	private List<Country> countries;
+    private Integer id;
+    private String name;
+    private List<Country> countries;
 
-	public Region(){
-	}
+    public Region() {
+    }
 
-	public Region(String name) {
-		this(name, null);
+    public Region(String name) {
+        this(name, null);
 	}
 
 	public Region(String name, List<Country> countries) {

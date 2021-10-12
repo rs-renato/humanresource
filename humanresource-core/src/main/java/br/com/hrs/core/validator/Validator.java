@@ -1,7 +1,7 @@
 package br.com.hrs.core.validator;
 
-import br.com.hrs.core.exception.error.Error;
-import br.com.hrs.core.exception.error.FIELD;
+import br.com.hrs.core.common.error.Error;
+import br.com.hrs.core.common.error.FIELD;
 import org.springframework.core.GenericTypeResolver;
 
 import java.util.Optional;

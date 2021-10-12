@@ -12,17 +12,17 @@ import java.util.Arrays;
 import java.util.List;
 
 @Named
-public class EmployeeMockRepository extends MockRepository<Employee, Integer> implements EmployeeRepository {
+public class EmployeeHashMapRepository extends HashMapRepository<Employee, Integer> implements EmployeeRepository {
 
     @Override
     public List<Employee> buildCollection() {
 
         try {
 
-                Employee employee01 = new Employee.Builder()
-                        .id(100)
-                        .firstName("Steven")
-                        .lastName("King")
+            Employee employee01 = new Employee.Builder()
+                    .id(100)
+                    .firstName("Steven")
+                    .lastName("King")
                         .email("SKING")
                         .phone("515.123.4567")
                         .hireDate(new SimpleDateFormat("dd.MM.yyyy").parse("17.06.2003"))
