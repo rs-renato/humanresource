@@ -7,7 +7,7 @@
     </Appenders>
     <Loggers>
         <!-- avoid duplicated logs with additivity=false -->
-        <Logger name="br.com.hrs" level="DEBUG" additivity="false">
+        <Logger name="br.com.hrs" level="INFO" additivity="false">
             <AppenderRef ref="console"/>
         </Logger>
 
@@ -15,11 +15,11 @@
             <AppenderRef ref="console"/>
         </Logger>
 
-        <Logger name="org.ehcache" level="INFO" additivity="false">
+        <Logger name="org.ehcache" level="ERROR" additivity="false">
             <AppenderRef ref="console"/>
         </Logger>
 
-        <Logger name="org.hibernate" level="INFO" additivity="false">
+        <Logger name="org.hibernate" level="ERROR" additivity="false">
             <AppenderRef ref="console"/>
         </Logger>
 

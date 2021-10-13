@@ -16,6 +16,34 @@
             <groupId>com.hrs</groupId>
             <artifactId>humanresource-core</artifactId>
         </dependency>
+
+        <!-- Spring Jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+
+        <!--Test -->
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.hrs</groupId>
+            <artifactId>humanresource-persistence</artifactId>
+            <version>${humanrsource.version}</version>
+            <type>test-jar</type>
+        </dependency>
     </dependencies>
 
 </project>
