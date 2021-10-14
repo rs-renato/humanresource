@@ -18,6 +18,7 @@
 
     <properties>
         <java.version>15</java.version>
+        <spring-cloud.version>2020.0.4</spring-cloud.version>
         <humanrsource.version>0.0.1-SNAPSHOT</humanrsource.version>
         <jacoco.maven.plugin.version>0.8.7</jacoco.maven.plugin.version>
     </properties>
@@ -123,6 +124,7 @@
         <module>humanresource-persistence</module>
         <module>humanresource-persistence-jdbc</module>
         <module>humanresource-persistence-jpa</module>
+        <module>humanresource-microservice-country</module>
     </modules>
 
 </project>
