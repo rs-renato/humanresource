@@ -120,9 +120,9 @@
 
     <modules>
         <module>humanresource-core</module>
-        <module>humanresource-persistence-jpa</module>
-        <module>humanresource-persistence-jdbc</module>
         <module>humanresource-persistence</module>
+        <module>humanresource-persistence-jdbc</module>
+        <module>humanresource-persistence-jpa</module>
     </modules>
 
 </project>
