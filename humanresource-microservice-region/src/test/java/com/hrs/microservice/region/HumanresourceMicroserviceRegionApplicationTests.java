@@ -1,10 +1,10 @@
-package com.hrs.microservice.country;
+package com.hrs.microservice.region;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HumanresourceMicroserviceCountryApplicationTests {
+class HumanresourceMicroserviceRegionApplicationTests {
 
     @Test
     void contextLoads() {

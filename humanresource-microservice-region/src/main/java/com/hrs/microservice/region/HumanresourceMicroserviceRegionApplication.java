@@ -1,12 +1,12 @@
-package com.hrs.microservice.country;
+package com.hrs.microservice.region;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HumanresourceMicroserviceCountryApplication {
+public class HumanresourceMicroserviceRegionApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HumanresourceMicroserviceCountryApplication.class, args);
+        SpringApplication.run(HumanresourceMicroserviceRegionApplication.class, args);
     }
 }
