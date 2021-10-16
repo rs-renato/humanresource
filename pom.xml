@@ -9,7 +9,7 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.hrs</groupId>
+    <groupId>br.com.hrs</groupId>
     <artifactId>humanresource-parent</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -17,20 +17,28 @@
 
     <properties>
         <java.version>15</java.version>
-        <spring-cloud.version>2020.0.4</spring-cloud.version>
+        <!-- HRS -->
         <humanrsource.version>0.1.0-SNAPSHOT</humanrsource.version>
+        <!-- Spring Clold -->
+        <spring-cloud.version>2020.0.4</spring-cloud.version>
+        <!-- Jacoco -->
         <jacoco.maven.plugin.version>0.8.7</jacoco.maven.plugin.version>
+        <!--  Springfox  -->
+        <springfox-swagger.version>2.9.2</springfox-swagger.version>
+        <!-- Map Construct -->
+        <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.hrs</groupId>
+                <groupId>br.com.hrs</groupId>
                 <artifactId>humanresource-core</artifactId>
                 <version>${humanrsource.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.hrs</groupId>
+                <groupId>br.com.hrs</groupId>
                 <artifactId>humanresource-persistence</artifactId>
                 <version>${humanrsource.version}</version>
             </dependency>
