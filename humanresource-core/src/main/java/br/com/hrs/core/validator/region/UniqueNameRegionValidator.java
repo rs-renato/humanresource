@@ -38,8 +38,11 @@ public class UniqueNameRegionValidator implements SaveValidator<Region>, UpdateV
 			Error.of("Region Name").when(FIELD.MANDATORY).trows();
 		}
 
-		if (this.regionRepository.findByName(region.getName()).isPresent()
-				&& !regionRepository.findById(region.getId()).get().getName().equals(region.getName())){
+		// if has regionId, so its an update
+		Integer regionId = region.getId();
+
+		if ((regionId == null && this.regionRepository.findByName(region.getName()).isPresent())
+				|| (regionId != null && !regionRepository.findById(regionId).get().getName().equals(region.getName()))){
 			throw new HrsBusinessException("Region name should be unique");
 		}
 	}

@@ -128,9 +128,9 @@ public class HrsApiWebMvcConfiguration implements WebMvcConfigurer {
 	    
 	@Bean
 	public LocalValidatorFactoryBean validator() {
-	    LocalValidatorFactoryBean validatorFactoryBean = new LocalValidatorFactoryBean();
-	    validatorFactoryBean.setValidationMessageSource(messageSource());
-	    return validatorFactoryBean;
+		LocalValidatorFactoryBean validatorFactoryBean = new LocalValidatorFactoryBean();
+		validatorFactoryBean.setValidationMessageSource(messageSource());
+		return validatorFactoryBean;
 	}
 
 	/*@Bean
