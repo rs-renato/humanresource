@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.Objects;
+import java.util.Optional;
 
 @Named
 public class UniqueNameRegionValidator implements SaveValidator<Region>, UpdateValidator<Region> {
@@ -38,11 +39,13 @@ public class UniqueNameRegionValidator implements SaveValidator<Region>, UpdateV
 			Error.of("Region Name").when(FIELD.MANDATORY).trows();
 		}
 
-		// if has regionId, so its an update
+		// if has regionId, so it's an update
 		Integer regionId = region.getId();
+		Optional<Region> regionFound = this.regionRepository.findByName(region.getName());
 
-		if ((regionId == null && this.regionRepository.findByName(region.getName()).isPresent())
-				|| (regionId != null && !regionRepository.findById(regionId).get().getName().equals(region.getName()))){
+		if (regionFound.isPresent() &&
+				(regionId == null || !regionFound.get().getId().equals(regionId))){
+
 			throw new HrsBusinessException("Region name should be unique");
 		}
 	}
