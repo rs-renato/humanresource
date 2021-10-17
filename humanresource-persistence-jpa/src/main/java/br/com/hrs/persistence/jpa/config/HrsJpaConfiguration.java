@@ -1,6 +1,5 @@
 package br.com.hrs.persistence.jpa.config;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -8,8 +7,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -34,17 +31,6 @@ import java.util.stream.Collectors;
 public class HrsJpaConfiguration {
 
     public static final String PERSISTENCE_JPA_REPOSITORY_PACKAGE = "br.com.hrs.persistence.jpa.repository";
-
-    @Bean
-    @ConditionalOnMissingBean
-    public DataSource hrsDataSource() {
-        return new EmbeddedDatabaseBuilder()
-                .addScript("database/create.sql")
-                .addScript("database/insert.sql")
-                .generateUniqueName(true)
-                .setType(EmbeddedDatabaseType.DERBY)
-                .build();
-    }
 
     @Bean
     public JpaVendorAdapter jpaVendorAdapter() {
