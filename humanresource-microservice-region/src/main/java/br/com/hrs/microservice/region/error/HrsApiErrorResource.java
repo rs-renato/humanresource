@@ -1,8 +1,9 @@
 package br.com.hrs.microservice.region.error;
 
-import br.com.hrs.microservice.region.support.message.MensagemRetorno;
-import br.com.hrs.microservice.region.support.message.MensagemRetornoCategoria;
-import br.com.hrs.microservice.region.support.message.MensagemRetornoResponseEntitySupport;
+
+import com.hrs.microservice.support.message.MensagemRetorno;
+import com.hrs.microservice.support.message.MensagemRetornoCategoria;
+import com.hrs.microservice.support.message.MensagemRetornoResponseEntitySupport;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

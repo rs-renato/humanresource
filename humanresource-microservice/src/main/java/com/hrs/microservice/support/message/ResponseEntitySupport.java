@@ -1,7 +1,8 @@
-package br.com.hrs.microservice.region.support.message;
+package com.hrs.microservice.support.message;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
 /**
  * Utility class to build an @{link {@link ResponseEntity}
  * @author renato-rs

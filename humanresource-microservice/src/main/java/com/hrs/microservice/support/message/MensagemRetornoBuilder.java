@@ -1,4 +1,4 @@
-package br.com.hrs.microservice.region.support.message;
+package com.hrs.microservice.support.message;
 
 import java.util.List;
 

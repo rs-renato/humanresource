@@ -13,7 +13,7 @@
     <artifactId>humanresource-parent</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <description>Human Resource Microservices [PARENT]</description>
+    <name>Human Resource Microservices [PARENT]</name>
 
     <properties>
         <java.version>15</java.version>
@@ -131,6 +131,7 @@
         <module>humanresource-persistence</module>
         <module>humanresource-persistence-jdbc</module>
         <module>humanresource-persistence-jpa</module>
+        <module>humanresource-microservice</module>
         <module>humanresource-microservice-region</module>
     </modules>
 

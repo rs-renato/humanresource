@@ -1,4 +1,4 @@
-package br.com.hrs.microservice.region.support;
+package com.hrs.microservice.support;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -7,7 +7,7 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 @PropertySources({
-	@PropertySource(value="classpath:/hrs-microservice-region-documentation.properties", encoding = "UTF-8"),
+	@PropertySource(value="classpath:/hrs-microservice-documentation.properties", encoding = "UTF-8"),
 })
 public class HrsApiPropertiesSupport {
 	

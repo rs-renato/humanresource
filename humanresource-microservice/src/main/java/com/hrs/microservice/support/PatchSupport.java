@@ -1,8 +1,8 @@
-package br.com.hrs.microservice.region.support;
+package com.hrs.microservice.support;
 
-import br.com.hrs.microservice.region.exception.PatchException;
-import br.com.hrs.microservice.region.validation.FieldValidationStrategy;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hrs.microservice.exception.PatchException;
+import com.hrs.microservice.validation.FieldValidationStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

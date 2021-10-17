@@ -18,6 +18,10 @@ public class HrsCoreSelector implements ImportSelector {
         AnnotationAttributes attributes = AnnotationAttributes
                 .fromMap(annotationMetadata.getAnnotationAttributes(EnableHrsCore.class.getName(), false));
 
+        if (attributes == null){
+            return null;
+        }
+
         boolean loadMockRepository = attributes.getBoolean("loadMockRepository");
         boolean loadValidators = attributes.getBoolean("loadValidators");
 

@@ -1,19 +1,22 @@
-package br.com.hrs.microservice.region.config;
+package com.hrs.microservice.config;
 
-import br.com.hrs.microservice.region.support.patch.JsonMergePatchHttpMessagemConverter;
-import br.com.hrs.microservice.region.support.patch.JsonPatchHttpMessagemConverter;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr353.JSR353Module;
+import com.hrs.microservice.support.HrsApiPropertiesSupport;
+import com.hrs.microservice.support.PatchSupport;
+import com.hrs.microservice.support.patch.JsonMergePatchHttpMessagemConverter;
+import com.hrs.microservice.support.patch.JsonPatchHttpMessagemConverter;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.core.env.Environment;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.data.web.config.PageableHandlerMethodArgumentResolverCustomizer;
 import org.springframework.http.MediaType;
@@ -27,6 +30,7 @@ import org.springframework.web.servlet.config.annotation.ContentNegotiationConfi
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.validation.Validator;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.TimeZone;
@@ -66,10 +70,10 @@ public class HrsApiWebMvcConfiguration implements WebMvcConfigurer {
 				.mediaType("json", MediaType.APPLICATION_JSON);
 	}
 
-	/*@Bean
+	@Bean
 	public HrsApiPropertiesSupport hrsApiPropertiesSupport(Environment environment) {
 		return new HrsApiPropertiesSupport(environment);
-	}*/
+	}
 
 	@Bean
 	public MappingJackson2XmlHttpMessageConverter mappingJackson2XmlHttpMessageConverter() {
@@ -133,8 +137,8 @@ public class HrsApiWebMvcConfiguration implements WebMvcConfigurer {
 		return validatorFactoryBean;
 	}
 
-	/*@Bean
+	@Bean
 	public PatchSupport patchSupport(ObjectMapper objectMapper, Validator validator){
 		return new PatchSupport(objectMapper, validator);
-	}*/
+	}
 }
