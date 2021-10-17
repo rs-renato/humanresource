@@ -1,7 +1,7 @@
 package br.com.hrs.microservice.region.v1.docs;
 
-import br.com.hrs.microservice.region.support.message.MensagemRetorno;
 import br.com.hrs.microservice.region.v1.resource.RegionResource;
+import com.hrs.microservice.support.message.MensagemRetorno;
 import io.swagger.annotations.*;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

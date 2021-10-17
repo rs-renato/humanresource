@@ -1,4 +1,4 @@
-package br.com.hrs.microservice.region.validation;
+package com.hrs.microservice.validation;
 
 import javax.validation.groups.Default;
 

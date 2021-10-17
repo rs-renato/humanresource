@@ -9,9 +9,8 @@
 
     <groupId>br.com.hrs</groupId>
     <artifactId>humanresource-core</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <description>Human Resource Microservices [CORE]</description>
+    <name>Human Resource Microservices [CORE]</name>
 
     <dependencies>
         <!-- CDI -->
@@ -30,10 +29,10 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--Test -->
         <dependency>

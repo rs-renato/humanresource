@@ -1,10 +1,10 @@
 package br.com.hrs.microservice.region.error;
 
 import br.com.hrs.core.exception.HrsBusinessException;
-import br.com.hrs.microservice.region.exception.ResourceNotFoundException;
-import br.com.hrs.microservice.region.support.message.MensagemRetorno;
-import br.com.hrs.microservice.region.support.message.MensagemRetornoCategoria;
-import br.com.hrs.microservice.region.support.message.MensagemRetornoResponseEntitySupport;
+import com.hrs.microservice.exception.ResourceNotFoundException;
+import com.hrs.microservice.support.message.MensagemRetorno;
+import com.hrs.microservice.support.message.MensagemRetornoCategoria;
+import com.hrs.microservice.support.message.MensagemRetornoResponseEntitySupport;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.MessageSource;

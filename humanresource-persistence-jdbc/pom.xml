@@ -8,11 +8,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>humanresource-persistence-jdbc</artifactId>
+    <packaging>jar</packaging>
+    <name>Human Resource Microservices [PERSISTENCE JDBC]</name>
 
     <dependencies>
         <dependency>
             <groupId>br.com.hrs</groupId>
             <artifactId>humanresource-persistence</artifactId>
+            <version>${humanrsource.version}</version>
         </dependency>
 
         <!-- Spring Jdbc -->

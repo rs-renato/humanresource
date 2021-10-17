@@ -1,6 +1,7 @@
-package br.com.hrs.microservice.region.config;
+package com.hrs.microservice.config;
 
-import br.com.hrs.microservice.region.support.HrsApiPropertiesSupport;
+import com.google.common.collect.Lists;
+import com.hrs.microservice.support.HrsApiPropertiesSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,8 +31,6 @@ import springfox.documentation.swagger2.mappers.ModelMapperImpl;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import static com.google.common.collect.Lists.newArrayList;
 
 @Configuration
 @EnableSwagger2
@@ -90,7 +89,7 @@ public class HrsApiSwaggerConfiguration implements WebMvcConfigurer {
 	@Bean
 	protected ArrayList<ResponseMessage> responsesGobal() {
 
-		return newArrayList(
+		return Lists.newArrayList(
 				new ResponseMessageBuilder()
 					.code(HttpStatus.UNAUTHORIZED.value())
 					.message(HttpStatus.UNAUTHORIZED.getReasonPhrase())

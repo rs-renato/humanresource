@@ -1,4 +1,4 @@
-package br.com.hrs.microservice.region.exception;
+package com.hrs.microservice.exception;
 
 import br.com.hrs.core.exception.HrsRuntimeException;
 

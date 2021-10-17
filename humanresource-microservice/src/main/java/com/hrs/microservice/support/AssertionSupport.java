@@ -1,6 +1,6 @@
-package br.com.hrs.microservice.region.support;
+package com.hrs.microservice.support;
 
-import br.com.hrs.microservice.region.exception.ResourceNotFoundException;
+import com.hrs.microservice.exception.ResourceNotFoundException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.util.ObjectUtils;
