@@ -1,18 +1,13 @@
 package br.com.hrs.persistence.jpa.repository;
 
 import br.com.hrs.core.repository.CountryRepository;
-import br.com.hrs.persistence.jpa.config.HrsJpaConfiguration;
+import br.com.hrs.persistence.jpa.config.JpaRepositoryTest;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import javax.inject.Inject;
 
 @DisplayName("Jpa Repository - Country")
-@ContextConfiguration(classes = HrsJpaConfiguration.class)
-@ExtendWith(SpringExtension.class)
-public class CountryJpaRepositoryTest extends CountryRepositoryTest {
+public class CountryJpaRepositoryTest extends CountryRepositoryTest implements JpaRepositoryTest {
 
     @Inject
     private CountryRepository countryJpaRepository;

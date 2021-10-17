@@ -1,18 +1,13 @@
 package br.com.hrs.persistence.jpa.repository;
 
 import br.com.hrs.core.repository.LocationRepository;
-import br.com.hrs.persistence.jpa.config.HrsJpaConfiguration;
+import br.com.hrs.persistence.jpa.config.JpaRepositoryTest;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import javax.inject.Inject;
 
 @DisplayName("Jpa Repository - Location")
-@ContextConfiguration(classes = HrsJpaConfiguration.class)
-@ExtendWith(SpringExtension.class)
-public class LocationJpaRepositoryTest extends LocationRepositoryTest {
+public class LocationJpaRepositoryTest extends LocationRepositoryTest  implements JpaRepositoryTest {
 
     @Inject
     private LocationRepository locationJpaRepository;

@@ -1,18 +1,13 @@
 package br.com.hrs.persistence.jpa.repository;
 
 import br.com.hrs.core.repository.EmployeeRepository;
-import br.com.hrs.persistence.jpa.config.HrsJpaConfiguration;
+import br.com.hrs.persistence.jpa.config.JpaRepositoryTest;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import javax.inject.Inject;
 
 @DisplayName("Jpa Repository - Employee")
-@ContextConfiguration(classes = HrsJpaConfiguration.class)
-@ExtendWith(SpringExtension.class)
-public class EmployeeJpaRepositoryTest extends EmployeeRepositoryTest {
+public class EmployeeJpaRepositoryTest extends EmployeeRepositoryTest  implements JpaRepositoryTest {
 
     @Inject
     private EmployeeRepository employeeJpaRepository;
