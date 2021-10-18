@@ -1,3 +1,15 @@
 server:
   servlet:
     context-path: /hrs/api
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    generate-unique-name: true
+  sql:
+    init:
+      mode: embedded
+      schema-locations: classpath:database/create.sql
+      data-locations: classpath:database/insert.sql
