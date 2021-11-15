@@ -2,4 +2,7 @@
 
 # Human Resource Microservices
 
+## build humanresource-microservice-region
+mvn clean package install && docker-compose build --build-arg PROFILE=prod && docker-compose up
+
 ## TODO

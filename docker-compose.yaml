@@ -1,0 +1,65 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:5.7
+    platform: linux/amd64
+    container_name: 'mysql'
+    hostname: 'mysql'
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql!
+      MYSQL_DATABASE: humanresource
+      MYSQL_USER: hrs_user
+      MYSQL_PASSWORD: hrs@pwd
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/humanresource?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: hrs_user
+      SPRING_DATASOURCE_PASSWORD: hrs@pwd
+    volumes:
+      - mysql-volume:/var/lib/mysql
+      - ./humanresource-persistence/src/test/resources/database/mysql/create.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./humanresource-persistence/src/test/resources/database/mysql/insert.sql:/docker-entrypoint-initdb.d/2.sql
+    networks:
+      - hrs-network
+    extra_hosts:
+      - "mysql:127.0.0.1"
+
+  # Humanresource Microservice Region
+  hrs-ms-region:
+    depends_on:
+      - mysql
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 1
+    build:
+      context: .
+      dockerfile: humanresource-microservice-region/Dockerfile
+    image: renators/humanresource-microservice-region
+    container_name: 'hrs-ms-region'
+    restart: always
+    ports:
+      - '8080:8080'
+    environment:
+      JAVA_OPTS: -XX:MaxMetaspaceSize=1024m
+      WAIT_HOSTS: mysql:3306
+      WAIT_TIMEOUT: 1
+      WAIT_SLEEP_INTERVAL: 1
+      SPRING_PROFILES_ACTIVE: prod
+    networks:
+      - hrs-network
+    extra_hosts:
+      - "hrs-ms-region:127.0.0.1"
+
+networks:
+  hrs-network:
+    name: hrs-network
+    attachable: true
+    driver: bridge
+volumes:
+  mysql-volume:
+    name: mysql-volume

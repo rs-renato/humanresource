@@ -8,13 +8,13 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import javax.sql.DataSource;
 
 @Configuration
-public class HrsMemoryDatasourceConfig {
+public class HrsMemoryDatasource {
 
     @Bean
-    public DataSource hrsDataSource() {
+    public static DataSource hrsDataSource() {
         return new EmbeddedDatabaseBuilder()
-                .addScript("database/create.sql")
-                .addScript("database/insert.sql")
+                .addScript("database/embedded/create.sql")
+                .addScript("database/embedded/insert.sql")
                 .generateUniqueName(true)
                 .setType(EmbeddedDatabaseType.DERBY)
                 .build();

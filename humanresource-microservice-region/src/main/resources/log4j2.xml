@@ -19,6 +19,10 @@
             <AppenderRef ref="console"/>
         </Logger>
 
+        <Logger name="com.mysql" level="ERROR" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+
         <Logger name="org.hibernate" level="ERROR" additivity="false">
             <AppenderRef ref="console"/>
         </Logger>

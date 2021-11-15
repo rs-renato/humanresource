@@ -4,12 +4,8 @@ import br.com.hrs.core.common.config.annotation.EnableHrsCore;
 import br.com.hrs.persistence.jdbc.config.annotation.EnableHrsJdbcPersistence;
 import com.hrs.microservice.config.HrsApiSwaggerConfiguration;
 import com.hrs.microservice.config.HrsApiWebMvcConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.Profile;
-
-import javax.sql.DataSource;
 
 @Configuration
 @EnableHrsCore

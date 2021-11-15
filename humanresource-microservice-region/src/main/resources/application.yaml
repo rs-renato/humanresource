@@ -1,6 +1,11 @@
 server:
   servlet:
     context-path: /hrs/api
+spring:
+  profiles:
+    active: local
+  main:
+    allow-bean-definition-overriding: true
 ---
 spring:
   config:
@@ -11,5 +16,17 @@ spring:
   sql:
     init:
       mode: embedded
-      schema-locations: classpath:database/create.sql
-      data-locations: classpath:database/insert.sql
+      schema-locations: classpath:database/embedded/create.sql
+      data-locations: classpath:database/embedded/insert.sql
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    name: hrsDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+    url: jdbc:mysql://mysql:3306/humanresource
+    username: hrs_user
+    password: hrs@pwd
